@@ -242,6 +242,6 @@ class TranslatorManager implements TranslatorManagerInterface
      */
     public function trans($key)
     {
-        return $this->translator->trans($key);
+        return isset($this->translator) ? $this->translator->trans($key) : '';
     }
 }
